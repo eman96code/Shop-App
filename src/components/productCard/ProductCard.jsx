@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 const ProductCard = (props) => {
   const { product } = props;
   return (
@@ -94,9 +95,9 @@ const ProductCard = (props) => {
             </svg>
           </button>
         </div>
-        <button className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50 mt-4 w-full flex items-center justify-center">
+        <Link to={`/product/${product.id}`} className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50 mt-4 w-full flex items-center justify-center">
           more details
-        </button>
+        </Link>
         <div className="flex justify-between w-full mt-4 items-center">
           <div >
             <button className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50  w-full flex items-center justify-center">
